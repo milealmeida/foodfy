@@ -1,0 +1,49 @@
+div.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.modal{
+    background-color: #FFFFFF;
+    width: 47.1%;
+    height: 413px;
+    border-radius: 16px;
+    margin: 15vh auto;
+    text-align: center;
+}
+
+div.modal-img img{
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 2.7%;
+}
+
+div.modal-title h1{
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 1.8%;
+}
+
+div.modal-text p{
+    color: #777777;
+    font-size: 18px;
+    margin-top: 0.4%;
+    padding-bottom: 13%;
+}
+
+a.modal-close{
+    color: #999999;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
