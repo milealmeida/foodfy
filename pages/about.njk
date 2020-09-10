@@ -1,0 +1,39 @@
+{% extends 'layout.njk' %}
+
+{% block head %} 
+    <title>Sobre - Foodfy</title> 
+{% endblock %}
+
+{% block content %}
+    <div class="title">
+        <h1>{{ about.title }}</h1>
+    </div>
+    <div class="content">
+        <p>{{ about.paragraphic01 }}</p>
+            
+        <br/>
+
+        <p>{{ about.paragraphic02 }}</p>
+    </div>
+
+    <div class="subtitle">
+        <h1>{{ about.subtitle01 }}</h1>
+    </div>
+
+    <div class="content">
+        <p>{{ about.paragraphic01 }}</p>
+
+        <br/>
+
+        <p>{{ about.paragraphic02 }}</p>
+    </div>
+
+    <div class="subtitle">
+        <h1>{{ about.subtitle02 }}</h1>
+    </div>
+
+    <div class="content">
+        <p>{{ about.paragraphic02 }}</p>
+    </div>
+
+{% endblock %}
