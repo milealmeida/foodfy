@@ -22,8 +22,10 @@
             <a class="link-img" href="/">
                 <img src="/assets/logo.png" alt="Logo Foodfy">
             </a>
-            <a class="link active" href="/about">Sobre</a>
-            <a class="link" href="/dishes">Receitas</a>
+            {% block menu %}
+                <a class="link" href="/about">Sobre</a>
+                <a class="link" href="/recipes">Receitas</a>
+            {% endblock %}
         </div>
     </header>
 
@@ -40,5 +42,7 @@
             <p>Todos direitos reservados, receitas Foodfy.</p>
         </div>
     </footer>
+
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

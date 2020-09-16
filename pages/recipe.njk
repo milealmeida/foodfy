@@ -4,31 +4,46 @@
         <title>Receita de {{ item.title }} - Foodfy</title>
 {% endblock %}
 
+{% block menu %}
+    <a class="link" href="/about">Sobre</a>
+    <a class="link active" href="/recipes">Receitas</a>
+{% endblock %}
+
 {% block content %}
     <div class="recipes">
 
-        <div class="recipe" id="{{items.id}}">
+        <div class="recipe">
             <img src="{{items.image}}" alt="Imagem {{items.title}}">
             <h1>{{items.title}}</h1>
-            <p>{{items.author}}</p>
+            <p>por {{items.author}}</p>
         </div>
 
-        <div class="content-recipe">
-            <h1>Ingredientes <small><a>ESCONDER</a></small></h1>
-            <ul>{% for item in items.ingredients %}
-                <li>{{item}}</li>
-               {%endfor%}
-            </ul>
-            <h1>Modo de preparo <small><a>ESCONDER</a></small></h1>
-
-            {% for item in items.preparation %}
-            <p>{{item}}</p>
-            {%endfor%}
-
-            <h1>Informações adicionais <small><a>ESCONDER</a></small></h1>
-            <p>{{items.information}}</p>
+        <div class="content-recipe-card">   
+            <h1>Ingredientes <small><span class="option">ESCONDER</span></small></h1> 
+            <div class="recipe-hide-show">
+                <ul>{% for item in items.ingredients %}
+                        <li>{{item}}</li>
+                    {%endfor%}
+                </ul>
+            </div>
         </div>
+
+        <div class="content-recipe-card">   
+            <h1>Modo de preparo <small><span class="option">ESCONDER</span></small></h1> 
+            <div class="recipe-hide-show">
+                {% for item in items.preparation %}
+                    <p>{{item}}</p>
+                {%endfor%}
+            </div>
+        </div>
+
+        <div class="content-recipe-card">   
+            <h1>Informações adicionais <small><span class="option">ESCONDER</span></small></h1> 
+            <div class="recipe-hide-show">
+                <p>{{items.information}}</p>
+            </div>
+        </div>
+
     </div>
-
 
 {% endblock %}

@@ -115,21 +115,38 @@ div.recipe p{
     padding-bottom: 3.9%;
 }
 
-div.content-recipe h1{
+div.content-recipe-card{
+    margin-bottom: 3.9%;
+}
+
+div.content-recipe-card h1{
     color: #111111;
     font-size: 24px;
     margin-bottom: 1.6%;
-    padding-top: 3.9%;
 }
 
-div.content-recipe small a{
+div.content-recipe-card small span{
     color: #999999;
     font-size: 12px;
     cursor: pointer;
     margin-left: 0.6%;
 }
 
-div.content-recipe p, li{
+div.content-recipe-card p, li{
     color: #444444 ;
     font-size: 18px;
+    line-height: 28px;
+}
+
+div.recipe-hide-show.hidden{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+div.recipe-hide-show{
+    opacity: 1;
+    visibility: visible;
+    height: 1%;
+    transition: 0.5s;
 }

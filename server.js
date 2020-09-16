@@ -29,22 +29,20 @@ server.get('/about', function(req, res){
     return res.render('about', { about });
 });
 
-server.get('/dishes', function(req, res){
-    return res.render('dishes', { items: dishes });
+server.get('/recipes', function(req, res){
+    return res.render('dishes', { dishes });
 });
 
-server.get('/recipe', function(req, res){
-    const id = req.query.id;
+server.get('/recipes/:index', function(req, res){
+    const recipeIndex  = req.params.index;
 
-    const dishe = dishes.find(function(dishe){
-        return dishe.id == id
-    });
+    const recipe = dishes[recipeIndex]
 
-    if(!dishe){
-        return res.send('Recipe not found!');
+    if (!recipe) {
+        return res.render('not-found')
     }
 
-    return res.render('recipe', { items: dishe });
+    return res.render('recipe', { items: recipe });
 })
 
 server.use(function(req, res) {
